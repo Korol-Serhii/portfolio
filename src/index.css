@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111827;
+    color: #e5e7eb;
+  }
+  
+  /* Кастомний скроллбар */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1f2937;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+  }
+  
+  /* Firefox скроллбар */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #4b5563 #1f2937;
+  }
+}
+
+@layer components {
+  .nav-item {
+    @apply block py-2.5 px-4 rounded transition duration-200 hover:bg-sky-700;
+  }
+  
+  .nav-item.active {
+    @apply bg-sky-600;
+  }
+  
+  .section-title {
+    @apply text-4xl font-bold text-sky-400 mb-6;
+  }
+  
+  .card {
+    @apply bg-gray-800 rounded-lg overflow-hidden shadow-lg;
+  }
+  
+  .btn-primary {
+    @apply bg-sky-600 hover:bg-sky-700 text-white font-medium py-2 px-4 rounded transition duration-200;
+  }
+  
+  .profile-name {
+    @apply text-center leading-tight max-w-full break-words hyphens-auto;
+  }
+  .glass-card {
+    @apply bg-gray-800 bg-opacity-60 backdrop-blur-lg rounded-2xl shadow-lg border border-gray-700;
+  }
+  .lang-card {
+    @apply bg-gray-900 bg-opacity-70 rounded-lg px-4 py-2 text-gray-200 font-semibold shadow hover:bg-sky-700 hover:text-white transition-all duration-200 cursor-default border border-gray-700;
+  }
+  
+  /* Стилі для hr елементів всередині HTML контенту */
+  .prose hr {
+    @apply border-gray-500 my-4 w-full !important;
+  }
+  
+  /* Альтернативний селектор для hr елементів */
+  .glass-card .prose hr {
+    @apply border-gray-500 my-4 w-full;
+  }
+  
+  /* Більш специфічний селектор для hr елементів в About секції */
+  .glass-card .prose-invert hr {
+    @apply border-gray-500 my-4 w-full !important;
+  }
+  @media (max-width: 768px) {
+    .glass-card {
+      @apply px-2 py-2;
+    }
+  }
+}
+@layer utilities {
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: none; }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.8s cubic-bezier(0.4,0,0.2,1) both;
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 1s cubic-bezier(0.4,0,0.2,1) both;
+  }
+} 
