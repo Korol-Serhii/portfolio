@@ -13,9 +13,9 @@
 ## 📋 Секції
 
 - **Про себе**: Особиста інформація та фото
-- **Нагороди**: Досягнення та сертифікати
-- **Навчання**: Освіта та дипломні роботи
-- **Курси**: Пройдені курси та навчання
+- **Освіта**: Освіта та дипломні роботи
+- **Військова служба**: Військовий досвід та досягнення
+- **Курси**: Пройдені курси та сертифікати
 - **Портфоліо**: Проекти з описом та зображеннями
 - **Контакти**: Зв'язок через email, телефон та соціальні мережі
 
@@ -30,8 +30,8 @@
 
 1. Клонуйте репозиторій:
 ```bash
-git clone https://github.com/your-username/personal-portfolio.git
-cd personal-portfolio
+git clone https://github.com/Korol-Serhii/portfolio.git
+cd portfolio
 ```
 
 2. Встановіть залежності:
@@ -49,15 +49,15 @@ npm run dev
 ## 🏗 Структура проекту
 
 ```
-personal-portfolio/
+portfolio/
 ├── src/
 │   ├── components/
 │   │   ├── sections/
 │   │   │   ├── About.jsx
-│   │   │   ├── Awards.jsx
 │   │   │   ├── Contacts.jsx
 │   │   │   ├── Courses.jsx
 │   │   │   ├── Education.jsx
+│   │   │   ├── Military.jsx
 │   │   │   └── Portfolio.jsx
 │   │   ├── LanguageSwitcher.jsx
 │   │   └── Sidebar.jsx
@@ -67,6 +67,10 @@ personal-portfolio/
 │   ├── main.jsx
 │   └── index.css
 ├── public/
+│   ├── certificates/
+│   ├── images/
+│   ├── portfolio/
+│   └── favicon.svg
 ├── package.json
 ├── vite.config.js
 ├── tailwind.config.js
@@ -118,7 +122,7 @@ personal-portfolio/
 1. Додайте в `package.json`:
 ```json
 {
-  "homepage": "https://your-username.github.io/personal-portfolio",
+  "homepage": "https://korol-serhii.github.io/portfolio",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

@@ -4,6 +4,7 @@
   "description": "Особисте портфоліо веб-розробника з підтримкою української та англійської мов",
   "type": "module",
   "main": "index.js",
+  "homepage": "https://korol-serhii.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "start": "vite preview --host 0.0.0.0 --port $PORT",
@@ -11,7 +12,8 @@
     "preview": "vite preview",
     "lint": "eslint . --ext js,jsx,ts,tsx",
     "lint:fix": "eslint . --ext js,jsx,ts,tsx --fix",
-    "install-deps": "yarn install"
+    "install-deps": "yarn install",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
