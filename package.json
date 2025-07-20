@@ -4,7 +4,7 @@
   "description": "Особисте портфоліо веб-розробника з підтримкою української та англійської мов",
   "type": "module",
   "main": "index.js",
-  "homepage": "https://korol-serhii.github.io/portfolio",
+  "homepage": "https://korol-serhii.github.io/portfolio/",
   "scripts": {
     "dev": "vite",
     "start": "vite preview --host 0.0.0.0 --port $PORT",
