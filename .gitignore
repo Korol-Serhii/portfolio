@@ -86,4 +86,7 @@ dist
 
 # Temporary folders
 tmp/
-temp/ 
+temp/
+
+# Build directory
+dist/ 
